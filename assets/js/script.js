@@ -15,7 +15,7 @@ function clickBotonAgregar() {
         //Muestra mensaje para indicar que se llenen los campos
         Swal.fire({
             title: '¡Ocurrió un error!',
-            text: `Por favor, llene todos los campos.`,
+            text: 'Por favor, llene todos los campos.',
             icon: 'error',
             confirmButtonText: 'Continuar'
         })
@@ -24,29 +24,10 @@ function clickBotonAgregar() {
         
     } else {
 
-        //Valida si el gasto ingresado fue mayor que 150
-        if (valorGasto > gastoMayor) {
-            //Muestra mensaje para indicar un gasto mayor a 150 dólares
-            Swal.fire({
-                title: '¡Ten cuidado!',
-                text: `Se registró un gasto mayor a USD ${gastoMayor}`,
-                icon: 'warning',
-                confirmButtonText: 'Continuar'
-            })
-        }
-
         //Almacena la información de los campos a las variables listas de cada campo
         listaNombresGastos.push(nombreGasto);
         listaDescripcionesGastos.push(descripcionGasto);
         listaValoresGastos.push(valorGasto);
-
-        //Muestra mensaje para indicar que se agregó el gasto
-        Swal.fire({
-            title: '¡Listo!',
-            text: `Gasto agregado.`,
-            icon: 'success',
-            confirmButtonText: 'Continuar'
-        })
         
         //Muestra la información de las listas
         actualizarListaGastos();
@@ -60,6 +41,8 @@ function actualizarListaGastos() {
     const listaElementos = document.getElementById("listaDeGastos");
 
     const totalElementos = document.getElementById("totalGastos");
+
+    let valorGasto = document.getElementById("valorGasto").value;
 
     let htmlLista = "";
 
@@ -79,11 +62,41 @@ function actualizarListaGastos() {
         totalGastos += Number(valorGasto);
     });
 
-    listaElementos.innerHTML = htmlLista;
-    totalElementos.innerHTML = totalGastos.toFixed(2);
+    //Valida si el gasto ingresado fue mayor que 150
+    if (valorGasto > gastoMayor) {
 
-    //Limpia todos los campos
-    limpiar();
+        //Muestra mensaje para indicar un gasto mayor a 150 dólares
+        Swal.fire({
+            title: '¡Ten cuidado!',
+            text: `Se registró un gasto mayor a USD ${gastoMayor}`,
+            icon: 'warning',
+            confirmButtonText: 'Continuar'
+        })
+
+        listaElementos.innerHTML = htmlLista;
+        totalElementos.innerHTML = totalGastos.toFixed(2);
+
+        //Limpia todos los campos
+        limpiar();
+
+    } else {
+
+        //Muestra mensaje para indicar que se agregó el gasto
+        Swal.fire({
+            title: '¡Listo!',
+            text: `Gasto agregado.`,
+            icon: 'success',
+            confirmButtonText: 'Continuar'
+        })
+
+        listaElementos.innerHTML = htmlLista;
+        totalElementos.innerHTML = totalGastos.toFixed(2);
+
+        //Limpia todos los campos
+        limpiar();
+
+    }
+
 }
 
 //Esta función se invoca al momento de que el usuario hace la acción de agregar información
@@ -135,9 +148,9 @@ function editarGasto(posicion) {
 //Esta función se invoca al momento de que el usuario hace clcik en el boton Editar Gasto
 function clickBotonEditar() {
 
-    const editarNombreGasto = document.getElementById("nombreGasto").value;
-    const editarDescripcionGasto = document.getElementById("descripcionGasto").value;
-    const editarValorGasto = document.getElementById("valorGasto").value;
+    let editarNombreGasto = document.getElementById("nombreGasto").value;
+    let editarDescripcionGasto = document.getElementById("descripcionGasto").value;
+    let editarValorGasto = document.getElementById("valorGasto").value;
 
     //Valida los campos. Si están vacios uno de ellos o todos, manda mensaje de error, en caso contrario envía la información
     if (editarNombreGasto === "" || editarDescripcionGasto === "" || editarValorGasto === "") {

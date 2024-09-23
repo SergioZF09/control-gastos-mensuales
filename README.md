@@ -46,11 +46,11 @@ Se trata de un control de gastos mensuales, donde se introduce el nombre del gas
 - JavaScript
 
 ## Desafíos
-- Generar un mensaje de alerta cuando se registre un gasto mayor a 150$ dólares.
+- Generar un mensaje de alerta cuando se registre un gasto mayor a 150$ dólares. (Completado)
 
-- Agregar un nuevo campo donde se pueda colocar una descripción más detallada del gasto.
+- Agregar un nuevo campo donde se pueda colocar una descripción más detallada del gasto. (Completado)
 
-- Agregar un botón que permita modificar los gastos registrados.
+- Agregar un botón que permita modificar los gastos registrados. (Completado)
 
 ## Autor
 Sergio Zúñiga Fraga - Licenciado en Informática
