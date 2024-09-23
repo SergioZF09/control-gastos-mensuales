@@ -1,9 +1,9 @@
-# Generador de Contraseña
+# Control de Gastos Mensuales
 
 ## Descripción
 Este es un proyecto realizado en el curso Inmersión Dev con JavaScript de Alura Latam junto con los Maestros Christian Velasco, Leonardo Jose Castillo Lacruz y Jeanmarie Quijada, e incluyendo tres retos para realizar.
 
-Se trata de un generador de un control de gastos mensuales, donde se introduce el nombre del gasto, su descripción y su valor, después se genera una lista mostrando dicha información junto con dos botones: editar y eliminar, y muestra el total de todos los gastos agregados.
+Se trata de un control de gastos mensuales, donde se introduce el nombre del gasto, su descripción y su valor, después se genera una lista mostrando dicha información junto con dos botones: editar y eliminar, y muestra el total de todos los gastos agregados.
 
 ## Funciones del proyecto
 - **Campo Nombre del Gasto.** Se introduce el nombre del gasto que se realizó.
