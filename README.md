@@ -18,9 +18,9 @@ Se trata de un control de gastos mensuales, donde se introduce el nombre del gas
 
 - **Botón Editar Gasto.** Se da click para guardar los cambios del gasto que se editó.
 
-- **Botón Eliminar.** Se da click para elimiar un gasto en específico.
+- **Botón Eliminar.** Se da click para eliminar un gasto en específico.
 
-- **Mensaje para los campos Nombre del Gasto, Descripción del Gasto y Valor del Gasto al agregar un gasto.** Al los tres campos junto muestra tres mensajes.
+- **Mensaje para los campos Nombre del Gasto, Descripción del Gasto y Valor del Gasto al agregar un gasto.** A los tres campos junto muestra tres mensajes.
 
     - Cuando no se introduce información en los tres campos muestra lo siguiente: "**_Por favor, llene todos los campos._**".
 
