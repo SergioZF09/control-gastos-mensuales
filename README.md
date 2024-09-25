@@ -22,7 +22,7 @@ Se trata de un control de gastos mensuales, donde se introduce el nombre del gas
 
 - **Mensaje para los campos Nombre del Gasto, Descripción del Gasto y Valor del Gasto al agregar un gasto.** A los tres campos junto muestra tres mensajes.
 
-    - Cuando no se introduce información en los tres campos muestra lo siguiente: "**_Por favor, llene todos los campos._**".
+    - Cuando no se introduce información en uno o en los tres campos muestra lo siguiente: "**_Por favor, llene todos los campos._**".
 
     - Cuando se agrega un gasto muestra lo siguiente: "**_Gasto agregado._**".
 
@@ -30,7 +30,7 @@ Se trata de un control de gastos mensuales, donde se introduce el nombre del gas
 
 - **Mensaje para los campos Nombre del Gasto, Descripción del Gasto y Valor del Gasto al editar un gasto.** Al agregar un gasto se muestra el botón Editar, se inserta la información a los campos y muestra dos mensajes (al darle click al botón Editar Gasto).
 
-    - Cuando no se introduce información en los tres campos muestra lo siguiente: "**_Por favor, llene todos los campos._**".
+    - Cuando no se introduce información en uno o en los tres campos muestra lo siguiente: "**_Por favor, llene todos los campos._**".
 
     - Cuando se edita un gasto muestra lo siguiente: "**_Gasto editado._**".
 
@@ -44,6 +44,8 @@ Se trata de un control de gastos mensuales, donde se introduce el nombre del gas
 - CSS3
 
 - JavaScript
+
+- SweetAlert2
 
 ## Desafíos
 - Generar un mensaje de alerta cuando se registre un gasto mayor a 150$ dólares. (Completado)
